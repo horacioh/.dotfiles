@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 # ~/.macos — https://mths.be/macos
-# Modified by Kent C. Dodds
+# Modified by Horacio Herrera
 # Run without downloading:
-# curl https://raw.githubusercontent.com/kentcdodds/dotfiles/master/.macos | bash
+# curl https://raw.githubusercontent.com/horacioh/dotfiles/master/.macos | bash
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -26,7 +26,7 @@ mkdir -p "${HOME}/workspace"
 
 echo "installing homebrew"
 # install homebrew https://brew.sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo "brew installing stuff"
 # hub: a github-specific version of git
@@ -36,7 +36,8 @@ echo "brew installing stuff"
 # ffmpeg: eventually I'll need this for something
 # tree: really handy for listing out directories in text
 # bat: A cat(1) clone with syntax highlighting and Git integration.
-brew install git libdvdcss ripgrep imagemagick watchman tree bat github/gh/gh yarn go
+
+brew install git libdvdcss ripgrep imagemagick watchman tree bat github/gh/gh yarn
 
 echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
@@ -46,24 +47,26 @@ echo "npm --version: $(npm --version)"
 
 echo "installing a few global npm packages"
 npm install --global serve diff-so-fancy fkill-cli npm-quick-run \
-semantic-release-cli npm-check-updates pure-prompt
+semantic-release-cli npm-check-updates
 
 echo "installing apps with brew cask"
 brew cask install alfred google-chrome telegram \
 google-drive-file-stream itsycal visual-studio-code 1password \
-discord zoomus betterzip avibrazil-rdm sip \
-suspicious-package qlvideo spotify focus dropbox front qmoji slack
-
-echo "Generating an RSA token for GitHub"
-mkdir -p ~/.ssh
-touch ~/.ssh/config
-ssh-keygen -t rsa -b 4096 -C "hi@horacioh.com"
-echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
-eval "$(ssh-agent -s)"
-echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
+discord zoomus betterzip avibrazil-rdm sip notion \
+suspicious-package qlvideo spotify focus dropbox qmoji slack 
 
 echo "cloning dotfiles"
 git clone git@github.com:horacioh/dotfiles.git "${HOME}/dotfiles"
+
+echo "Generating an RSA token for GitHub"
+mkdir -p ~/dotfiles/.ssh
+touch ~/dotfiles/.ssh/config
+ssh-keygen -t rsa -b 4096 -C "hi@horacioh.com"
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/dotfiles/.ssh/config
+eval "$(ssh-agent -s)"
+echo "run 'pbcopy < ~/dotfiles/.ssh/id_rsa.pub' and paste that into GitHub"
+
+echo "Create symlinks"
 mkdir dotfiles/.zsh
 git clone git@github.com:sindresorhus/pure.git "${HOME}/dotfiles/.zsh"
 ln -s "${HOME}/dotfiles/.bash" "${HOME}/.bash"
@@ -74,11 +77,6 @@ ln -s "${HOME}/dotfiles/.vimrc" "${HOME}/.vimrc"
 ln -s "${HOME}/dotfiles/.vimrc-parts" "${HOME}/.vimrc-parts"
 ln -s "${HOME}/dotfiles/.zsh" "${HOME}/.zsh"
 
-echo "Install Go dev tools:"
-
-go get golang.org/x/tools/cmd/godoc
-go get github.com/golang/lint/golint
-
 echo "Installing Visual Studio Code extensions"
 
 cat vscode.extensions.txt | xargs -L1 code --install-extension
@@ -87,6 +85,10 @@ echo "making system modifications:"
 
 # Make Chrome Two finger swipe for back and forward
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
+
+echo "Installing Teleconsole"
+
+curl https://www.teleconsole.com/get.sh | sh
 
 ###############################################################################
 # General UI/UX                                                               #
