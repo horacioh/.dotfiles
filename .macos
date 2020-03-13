@@ -52,7 +52,7 @@ semantic-release-cli npm-check-updates
 echo "installing apps with brew cask"
 brew cask install alfred google-chrome telegram \
 google-drive-file-stream itsycal visual-studio-code 1password \
-discord zoomus betterzip avibrazil-rdm sip notion \
+discord zoomus betterzip avibrazil-rdm sip notion figma \
 suspicious-package qlvideo spotify focus dropbox qmoji slack 
 
 echo "cloning dotfiles"
