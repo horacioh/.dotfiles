@@ -1,3 +1,5 @@
+eval "$(ssh-agent -s)"
+
 # pure
 autoload -U promptinit; promptinit
 prompt pure
@@ -225,12 +227,3 @@ eval "$(direnv hook zsh)"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 
-# ---------------------
-# Go setup
-# ---------------------
-
-export GOPATH="${HOME}/.go"
-export GOROOT="$(brew --prefix golang)/libexec"
-export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
-test -d "${GOPATH}" || mkdir "${GOPATH}"
-test -d "${GOPATH}/src/github.com" || mkdir -p "${GOPATH}/src/github.com"
