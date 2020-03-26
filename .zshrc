@@ -145,6 +145,10 @@ alias co='git checkout'
 alias tree='git log --pretty=oneline --graph --decorate --all'
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
+# Remove Node Modules Alias: reference: https://www.jacobbolda.com/remove-node-modules-bash-alias/
+alias rnm='find . -name "node_modules" -type d -prune | xargs du -chs'
+alias dnm='find . -name "node_modules" -type d -prune -exec rm -rf "{}" +'
+
 
 #
 # ---------------------
