@@ -3,9 +3,9 @@ eval "$(ssh-agent -s)"
 # pure
 autoload -U promptinit; promptinit
 prompt pure
-
 PURE_PROMPT_SYMBOL=→
-# PURE_PROMPT_SYMBOL="➡️ "
+
+# export PS1="→ "
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -144,10 +144,20 @@ alias st='git status'
 alias co='git checkout'
 alias tree='git log --pretty=oneline --graph --decorate --all'
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
+alias git='hub'
 
 # Remove Node Modules Alias: reference: https://www.jacobbolda.com/remove-node-modules-bash-alias/
 alias rnm='find . -name "node_modules" -type d -prune | xargs du -chs'
 alias dnm='find . -name "node_modules" -type d -prune -exec rm -rf "{}" +'
+
+shorten() { node /Users/horacio/workspace/url-shortener/node_modules/.bin/netlify-shortener "$1" "$2"; }
+
+# Show/hide hidden files (starting with a `.`)
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# For screencasting, use stripped down settings with large text.
+alias teach="code --user-data-dir ~/.code_profiles/screencast/data"
 
 
 #
@@ -231,3 +241,4 @@ eval "$(direnv hook zsh)"
 export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
 
 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
