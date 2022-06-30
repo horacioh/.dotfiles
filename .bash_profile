@@ -102,6 +102,12 @@ alias st='git status'
 alias co='git checkout'
 alias tree='git log --pretty=oneline --graph --decorate --all'
 
+## Amplify Alias
+
+alias ast='amplify status'
+alias ap='amplify push'
+alias apy='amplify push --y'
+
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'

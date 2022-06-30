@@ -1,0 +1,10 @@
+{
+	"optOut": false,
+	"lastUpdateCheck": 1597662945823,
+	"update": {
+		"latest": "1.375.0",
+		"current": "1.352.1",
+		"type": "minor",
+		"name": "snyk"
+	}
+}
