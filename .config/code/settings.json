@@ -1,0 +1,94 @@
+{
+  "window.nativeTabs": true,
+  "workbench.iconTheme": "vs-seti",
+  "workbench.colorTheme": "GitHub Light Colorblind (Beta)",
+  "workbench.startupEditor": "none",
+  "editor.detectIndentation": true,
+  "editor.fontSize": 16,
+  "editor.lightbulb.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "editor.fontFamily": "'Mono Lisa', 'Dank Mono', 'Menlo Monaco', 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.suggestFontSize": 16,
+  "editor.snippetSuggestions": "top",
+  "editor.suggest.localityBonus": true,
+  "editor.acceptSuggestionOnCommitCharacter": true,
+  "editor.minimap.enabled": false,
+  "git.autofetch": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "gitlens.advanced.messages": {
+    "suppressFileNotUnderSourceControlWarning": true
+  },
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 120,
+  // "editor.wordBasedSuggestions": false,
+  "[markdown]": {
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.sideBar.location": "right",
+  "explorer.openEditors.visible": 0,
+  "window.newWindowDimensions": "default",
+  "files.exclude": {
+    "**/*.env": true
+  },
+  // "files.associations": {
+  //   "*.md": "mdx"
+  // },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.validate.enable": false,
+  // "editor.suggestSelection": "first",
+  "css.validate": false, // Disable css built-in lint
+  "diffEditor.renderSideBySide": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.confirmSync": false,
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "editor.tabSize": 2,
+  "githubPullRequests.createOnPublishBranch": "never",
+  "todo-tree.highlights.defaultHighlight": {
+    "icon": "alert",
+    "type": "text",
+    "foreground": "#f00",
+    "background": "#fff",
+    "opacity": 50,
+    "iconColour": "#00f"
+  },
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "icon": "check",
+      "type": "line"
+    },
+    "FIXME": {
+      "foreground": "#000",
+      "iconColour": "#ff0",
+      "gutterIcon": true
+    }
+  },
+  "python.analysis.autoImportCompletions": false,
+  "xstate.showVisualEditorWarnings": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.typegen.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.typegen.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "*.mts": "${capture}.typegen.ts",
+    "*.cts": "${capture}.typegen.ts"
+  }
+}
+
