@@ -103,8 +103,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Nix
+#
+# source ~/.zsh_profile
 
 . /Users/horacio/.nix-profile/etc/profile.d/nix.sh
 

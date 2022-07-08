@@ -1,5 +1,11 @@
 set path+=**
 
+" Ignore files
+set wildignore+=*/coverage/*
+set wildignore+=*/node_modules/*
+set wildignore+=*/.git/*
+
+
 set scrolloff=8
 set number
 set relativenumber
