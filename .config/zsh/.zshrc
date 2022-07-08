@@ -1,4 +1,6 @@
 eval "$(ssh-agent -s)"
+eval "$(direnv hook zsh)"
+eval "$(fnm env --use-on-cd)"
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -104,8 +106,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Nix
 
-# Nix
-
 . /Users/horacio/.nix-profile/etc/profile.d/nix.sh
 
 # fnm
@@ -138,7 +138,4 @@ alias tree='git log --pretty=oneline --graph --decorate --all'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
-# Direnv setup
-
-eval "$(direnv hook zsh)"
-
+source $HOME/.cargo/env
