@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo name for the new worktree:
+read selected_name
+
+git worktree add -b $selected_name wt/$selected_name
+
