@@ -104,7 +104,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-# source ~/.zsh_profile
+
+source ~/.zsh_profile
 
 . /Users/horacio/.nix-profile/etc/profile.d/nix.sh
 
@@ -118,6 +119,7 @@ plugins=(git zsh-autosuggestions aliases 1password)
 
 # Aliases
 
+alias vim="$VIM"
 alias ls='ls -la'
 alias cd..='cd ../'                                   # Go back 1 directory level (for fast typers)
 alias ..='cd ../'                                     # Go back 1 directory level

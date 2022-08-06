@@ -1,2 +1,9 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
 VIM="nvim"
+
+export DOTFILES=$HOME/.dotfiles
+
+# Where should I put you?
+bindkey -s ^f "tmux-sessionizer\n"
 
