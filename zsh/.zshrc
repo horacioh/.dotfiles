@@ -74,7 +74,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions aliases)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,15 +107,7 @@ source $ZSH/oh-my-zsh.sh
 
 source ~/.zsh_profile
 
-. /Users/horacio/.nix-profile/etc/profile.d/nix.sh
-
-# fnm
-export PATH=/Users/horacio/.fnm:$PATH
-eval "`fnm env`"
-
-# Plugins
-
-plugins=(git zsh-autosuggestions aliases 1password)
+# . /Users/horacio/.nix-profile/etc/profile.d/nix.sh
 
 # Aliases
 
@@ -140,3 +132,23 @@ alias tree='git log --pretty=oneline --graph --decorate --all'
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+
+# fnm
+export PATH=/Users/horacioh/.fnm:$PATH
+eval "`fnm env`"
+
+# fnm
+export PATH=/Users/horacioh/.fnm:$PATH
+eval "`fnm env`"
+
+# fnm
+export PATH=/Users/horacioh/.fnm:$PATH
+eval "`fnm env`"
+
+# fnm
+export PATH=/Users/horacioh/.fnm:$PATH
+eval "`fnm env`"
+
+# fnm
+export PATH=/Users/horacioh/.fnm:$PATH
+eval "`fnm env`"

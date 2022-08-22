@@ -4,6 +4,8 @@ VIM="nvim"
 
 export DOTFILES=$HOME/.dotfiles
 
+export GIT_EDITOR=$VIM
+
 # Where should I put you?
 bindkey -s ^f "tmux-sessionizer\n"
 
