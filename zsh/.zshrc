@@ -134,21 +134,5 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 
 # fnm
-export PATH=/Users/horacioh/.fnm:$PATH
-eval "`fnm env`"
-
-# fnm
-export PATH=/Users/horacioh/.fnm:$PATH
-eval "`fnm env`"
-
-# fnm
-export PATH=/Users/horacioh/.fnm:$PATH
-eval "`fnm env`"
-
-# fnm
-export PATH=/Users/horacioh/.fnm:$PATH
-eval "`fnm env`"
-
-# fnm
-export PATH=/Users/horacioh/.fnm:$PATH
+export PATH=$HOME/.fnm:$PATH
 eval "`fnm env`"
